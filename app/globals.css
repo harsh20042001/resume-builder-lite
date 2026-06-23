@@ -1,0 +1,52 @@
+/* app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fbf9f4;
+  color: #1c1a17;
+}
+
+/* Hairline rule used throughout the marketing site and editor chrome */
+.hr-rule {
+  border-color: #d8d2c4;
+}
+
+/* Visible keyboard focus, respected everywhere */
+:focus-visible {
+  outline: 2px solid #2f5d4e;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Margin-guide effect used on format-selection preview cards */
+.doc-preview {
+  background-image:
+    linear-gradient(to right, transparent 9%, #ece7da 9%, #ece7da 9.5%, transparent 9.5%),
+    linear-gradient(to right, transparent 91%, #ece7da 91%, #ece7da 91.5%, transparent 91.5%);
+}
